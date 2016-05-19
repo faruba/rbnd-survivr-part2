@@ -1,3 +1,4 @@
+require "colorizr"
 require_relative "game"
 require_relative "tribe"
 require_relative "contestant"
@@ -79,5 +80,4 @@ finalists = @merge_tribe.members #set finalists
 vote_results = @jury.cast_votes(finalists) #Jury members report votes
 @jury.report_votes(vote_results) #Jury announces their votes
 result = @jury.announce_winner(vote_results) #Jury announces final winner
-puts "The winner iiiiisssssssss #{result}"
-
+puts "The winner iiiiisssssssss " + "#{result}".green_bg

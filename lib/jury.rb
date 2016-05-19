@@ -18,13 +18,13 @@ class Jury
     @members.each{ |member|
       vote_to = name_list.sample
       ret[vote_to] += 1
-      puts "#{member} vote to #{vote_to}"
+      puts "#{member}".yellow  + " vote to " + "#{vote_to}".green
     }
     return ret
   end
   def report_votes(result)
     result.each{|name, votes|
-      puts "#{name} gets #{votes} votes"
+      puts "#{name}".blue + " gets " + "#{votes}".cyan + " votes"
     }
   end
   def announce_winner(result)
