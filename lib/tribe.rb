@@ -16,6 +16,7 @@ class Tribe
     #random pick ,the first one ,the last one or something else. shouldn't this details be described in
     #introduction or test_suit ?
     #this one is  working, but I'm not sure it is what you want
+    @members.shuffle!
     first = @members.pop
     if(first == options[:immune])
       @members.insert(0,first)
