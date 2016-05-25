@@ -1,3 +1,4 @@
+require "colorizr"
 
 class Tribe
   attr_reader :name, :members
