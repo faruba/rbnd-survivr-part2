@@ -22,6 +22,8 @@ class Game
   end
   def individual_immunity_challenge
     @last_immunity = @tribes.first.members.sample
+    # survivr.rb:37 ,  I think hiding the detail of getting challenge member is a right choice. 
+    # and DRY make me calling challenge 
     challenge
   end
   def challenge
